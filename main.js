@@ -1,66 +1,39 @@
-ar = new Array("one", 1, "two", false, "three", [77,88,99] ,"four", 
-{"one":1, "two":"two", "three": false}, "five", undefined);
+let button_press = false;
 
-var el_arr;
+var input_string;
 
-var ind = new Number;
+var result = "";
 
-var this_is_array;
+function button_onclick()
+{
+ 
+    input_string = document.getElementById("fild_for_input").value;
 
-var type_of_objekt = false;
+    document.getElementById("exsamp").style.background = "#A0bF";
+    document.getElementById("exsamp").style.color = "#FFFF";
+    document.getElementById("exsamp").innerText = "";
+
+    length_string =  input_string.length;
 
 
-sss = "Array content =  " + ar;
-
-
-var boxElem = document.activeElement.querySelector(".exsample");
-
-boxElem.innerHTML = sss;
-
-function Return_an_array_element_by_index(arr, index) {
-    if ((typeof (index) == "number") && (index <= (ar.length - 1))) {
-        var boxElem1 = document.activeElement.querySelector(".exsample1");
-        boxElem1.innerHTML = boxElem1.innerHTML + " True";
-        return ar[index];
-    } else {
-        var boxElem1 = document.activeElement.querySelector(".exsample1");
-        boxElem1.innerHTML = boxElem1.innerHTML + " False";
-        return undefined;
-
-    }
-};
-
-ind = 5;
-
-el_arr = Return_an_array_element_by_index(ar, ind);
-//alert(el_arr);
-
-this_is_array = Array.isArray(el_arr);
-//alert(typeof(el_arr));
-
-if (typeof (el_arr) == "number")  {
-    type_of_objekt = "number";
+if (length_string < 5) {
+    result = "This is a tiny string";
+}
+else if ((length_string >= 5)&&(length_string < 10)){
+    result = "This is a short string";
 }
 
-else if (typeof(el_arr) == "string") {
-type_of_objekt = "string";
-}    
+else if ((length_string >= 10)&&(length_string < 15)){
+    result = "This is an average string";
+}
 
-else if (typeof(el_arr) == "boolean") {
-    type_of_objekt = "boolean";
-}        
+else if ((length_string >= 15)&&(length_string < 30)){
+    result = "This is a large string";
+}
 
-else if (typeof(el_arr) == "object") {
-    if (this_is_array) {
-        type_of_objekt = "array";
-    } else {
-        type_of_objekt = "object";
-    }
-    }        
+else if (length_string >= 30) {
+    result = "This is a gigantic string";
+};
 
-else {
-    type_of_objekt = undefined;}   
-;
-
-var boxElem2 = document.activeElement.querySelector(".exsample2");
-boxElem2.innerHTML = boxElem2.innerHTML + ind + " is " + type_of_objekt;
+document.getElementById("exsamp").innerText = result;
+}

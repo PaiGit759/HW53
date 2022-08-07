@@ -3,7 +3,7 @@
 
 <head>
 
-  <title>HW53</title>
+  <title>HW56</title>
   <link rel="icon" type="image/x-icon" href="mine.ico">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,19 +13,24 @@
 
 <body>
 
-  <div class="exsample">
-    <span><b> </b></span><br>
+
+  
+  <div class="exsample" id = "exsamp">
+    <span><b> #FFFF </b></span><br>
   </div>
 
-  <div class="exsample1">
-    <span> ((typeof(index) == &ldquo;number&ldquo;) and (index &lt;= (ar.length-1))) </span><span><b> Result =
-      </b></span>
+  <div class="exsample1" id = "exsamp1">
+    <button type="button"  onclick = "button_onclick()">
+      Press  
+     </button>
+
   </div>
 
-  <div class="exsample2">
-    <span> Type of element array by index </span>
-  </div>
 
+  <form>
+    <label for="fild_for_input">Input string</label>
+    <input type="text" value="" id = "fild_for_input" style="width: 300px;">
+  </form>
 
 
   <script src="main.js"></script>
@@ -33,3 +38,4 @@
 </body>
 
 </html>
+

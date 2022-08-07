@@ -3,11 +3,11 @@ body {
 }
 
 .exsample {
-    top: 0%;
+    top:5%;
 }
 
 .exsample1 {
-    top: 8%;
+    top: 28%;
 }
 
 .exsample2 {
@@ -40,8 +40,23 @@ body {
     position: absolute;
     left: 20%;
     width: 60%;
-    height: 30px;
+    height: 130px;
     background-color: rgb(138, 212, 212);
+    padding-top: 5px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    font-size: x-large;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+.exsample1 {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    height: 30px;
+    background-color:  rgba(227, 214, 197, 0.664);
     padding-top: 5px;
     padding-left: 0px;
     padding-bottom: 10px;
